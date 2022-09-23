@@ -17,6 +17,10 @@ Screen recording with work, mini break and long break set at 1 min to show funct
 
 
 
+https://user-images.githubusercontent.com/104288486/192043379-f87f1a7e-6404-42f5-8ba7-4036549869d7.mov
+
+
+
 
 
 **Personal Highlights:**
