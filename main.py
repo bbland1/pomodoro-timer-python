@@ -13,6 +13,8 @@ timer = None
 paused_time = 0
 
 # ---------------------------- TIMER RESET ------------------------------- #
+
+
 def reset_timer():
     global reps
     reps = 0
@@ -45,11 +47,15 @@ def start_timer():
         timer_label.config(text="WORK", fg=GREEN)
 
 # Let's the timer be paused for any reason and changes the start button to resume
+
+
 def pause_timer():
     window.after_cancel(timer)
     start.config(text="Resume", command=resume_timer)
 
 # The function that when the resume button is pressed to keep counting from the time that it was paused at
+
+
 def resume_timer():
     global paused_time
     count_down(paused_time)
@@ -96,11 +102,13 @@ def count_down(count):
     start.config(text="Pause", command=pause_timer)
 
 # ---------------------------- NOTIFY OF CHANGE POPUP ------------------------------- #
+
+
 def notify():
     global reps
     global pop_up
 
-    rounds = math.floor(reps /2)
+    rounds = math.floor(reps / 2)
     # creating the pop up as a top level window, it should show above everything
     pop_up = Toplevel()
     pop_up.title("Pomodoro Timer")
@@ -128,7 +136,8 @@ def notify():
     pop_close.grid(column=1, row=5, pady=5)
 
     if reps % 8 == 0:
-        pop_up_label.config(text=f"You've completed {rounds} work rounds time for a break!", fg=RED)
+        pop_up_label.config(
+            text=f"You've completed {rounds} work rounds time for a break!", fg=RED)
     elif reps % 2 == 0:
         pop_up_label.config(text="Take a mini break!", fg=PINK)
     else:
@@ -139,6 +148,8 @@ def notify():
 
 # the pop ups button functionality mirrors the original window
 # this will close the pop up and do the designated function of it all
+
+
 def close_pop(choice):
     pop_up.destroy()
 
@@ -152,8 +163,11 @@ def close_pop(choice):
         pass
 
 # the finish button of the pop up will close the whole program if the user is done
+
+
 def close_it_all():
     window.quit()
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -188,28 +202,35 @@ reset.grid(column=2, row=6, pady=10)
 
 
 # the input function of setting the timer to have specific min work and breaks
-time_entry_label = Label(text="Set the times you want below and hit start.", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
-time_entry_label.grid(column=1, row=1, pady= 5)
+time_entry_label = Label(text="Set the times you want below and hit start.",
+                         fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
+time_entry_label.grid(column=1, row=1, pady=5)
 
 # set the work time takes whole numbers to represent the minutes
-work_time = Entry(width=7,  fg=GREEN, justify="center", font=(FONT_NAME, 20 ,"bold"), bg="white", insertbackground=GREEN, insertwidth=5)
+work_time = Entry(width=7,  fg=GREEN, justify="center", font=(
+    FONT_NAME, 20, "bold"), bg="white", insertbackground=GREEN, insertwidth=5)
 work_time.insert(END, string="25")
 work_time.grid(column=0, row=2, padx=5)
-work_time_label = Label(text="min of work", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
+work_time_label = Label(text="min of work", fg=GREEN,
+                        bg=YELLOW, font=(FONT_NAME, 15, "bold"))
 work_time_label.grid(column=0, row=3, padx=5)
 
 # set the short break time takes whole numbers to represent the minutes
-short_break_time = Entry(width=7, bg="white", fg=GREEN, justify="center", font=(FONT_NAME, 20 ,"bold"), insertbackground=GREEN, insertwidth=5)
+short_break_time = Entry(width=7, bg="white", fg=GREEN, justify="center", font=(
+    FONT_NAME, 20, "bold"), insertbackground=GREEN, insertwidth=5)
 short_break_time.insert(END, string="5")
 short_break_time.grid(column=1, row=2, padx=5)
-short_break_time_label= Label(text="min for mini break", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
+short_break_time_label = Label(
+    text="min for mini break", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
 short_break_time_label.grid(column=1, row=3, padx=5)
 
 # set the long break time takes whole numbers to represent the minutes
-long_break_time = Entry(width=7, bg="white", fg=GREEN, justify="center", font=(FONT_NAME, 20 ,"bold"), insertbackground=GREEN, insertwidth=5)
+long_break_time = Entry(width=7, bg="white", fg=GREEN, justify="center", font=(
+    FONT_NAME, 20, "bold"), insertbackground=GREEN, insertwidth=5)
 long_break_time.insert(END, string="20")
 long_break_time.grid(column=2, row=2, padx=5)
-long_break_time_label = Label(text="min for long break", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
+long_break_time_label = Label(
+    text="min for long break", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
 long_break_time_label.grid(column=2, row=3, padx=5)
 
 
