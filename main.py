@@ -116,7 +116,7 @@ def notify():
     pop_up.lift()
 
     pop_up_label = Label(pop_up, bg=YELLOW, fg=GREEN,
-                         font=(FONT_NAME, 20, "bold"))
+                        font=(FONT_NAME, 20, "bold"))
     pop_up_label.grid(column=1, row=1, pady=5)
 
     pop_continue = Button(pop_up, text="Continue", bg=YELLOW, font=(
@@ -177,6 +177,8 @@ window.config(padx=50, pady=50, bg=YELLOW)
 bg_photo = PhotoImage(file="tomato.png")
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 canvas.create_image(100, 112, image=bg_photo)
+
+# create and place all the 
 timer_text = canvas.create_text(
     100, 135, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=5, pady=5)
@@ -203,7 +205,7 @@ reset.grid(column=2, row=6, pady=10)
 
 # the input function of setting the timer to have specific min work and breaks
 time_entry_label = Label(text="Set the times you want below and hit start.",
-                         fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
+                        fg=GREEN, bg=YELLOW, font=(FONT_NAME, 15, "bold"))
 time_entry_label.grid(column=1, row=1, pady=5)
 
 # set the work time takes whole numbers to represent the minutes
