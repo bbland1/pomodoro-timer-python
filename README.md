@@ -7,6 +7,7 @@
 A GUI of the "Tomato Timer". This will allow the user to set work, short break and long break times that use the work break cycle with the pomodoro timer method. Once the user inputs the minutes they want each part to take they can hit start and the timer on the tomato will start counting down. It uses checkmarks that come up after each completion of a work cycle that will show how many work rounds have been completed. It can be used to boost productivity.
 
 
+
 Screen recording with work, mini break and long break set at 1 min to show functionality:
 
 
