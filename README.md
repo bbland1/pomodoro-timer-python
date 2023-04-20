@@ -4,11 +4,8 @@
 ![Top Language](https://img.shields.io/github/languages/top/bbland1/pomodoro-timer-python?style=plastic)
 ![Contributors](https://img.shields.io/github/contributors-anon/bbland1/pomodoro-timer-python?style=plastic)
 
-A GUI of the "Tomato Timer". This will allow the user to set work, short break and long break times that use the work break cycle with the pomodoro timer method. Once the user inputs the minutes they want each part to take they can hit start and the timer on the tomato will start counting down. It uses checkmarks that come up after each completion of a work cycle that will show how many work rounds have been completed.
+A GUI of the "Tomato Timer". This will allow the user to set work, short break and long break times that use the work break cycle with the pomodoro timer method. Once the user inputs the minutes they want each part to take they can hit start and the timer on the tomato will start counting down. It uses checkmarks that come up after each completion of a work cycle that will show how many work rounds have been completed. It can be used to boost productivity.
 
-Once the user hits start the button changes to a pause button which when clicked will change to a resume button. The timer can be reset with the reset button and the whole program can be closed by hitting th finished button. While the timer is running once the round gets to 10 seconds or less it triggers the bell of the system so that at user can hear the change from work to break coming and vice versa. When the actual switch happens a pop up shows up saying it's time for a break or work and has the button functionality to pause, reset, close the program or just continue. If the user does not click any button in the pop up within 10 seconds it will close itself as the timer keeps going.
-
-The pop up is a top level so it will show on top of the program or any programs and if the user has a full screen the screen will probably switch to make the timer and the time pop up the focus of that moment. 
 
 Screen recording with work, mini break and long break set at 1 min to show functionality:
 
@@ -58,5 +55,10 @@ pip install -r requirements.txt
 python main.py
 ```
 
+### Launching
+Creating an executable program from this python project is possible. While it was not done with this code here it is possible. Some methods for making the executable are listed in this article [here](https://towardsdatascience.com/how-to-easily-convert-a-python-script-to-an-executable-file-exe-4966e253c7e9).
+
+### License
+See the [LICENSE](./LICENSE) file for license rights and limitations (MIT).
 
 
